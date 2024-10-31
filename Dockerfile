@@ -2,7 +2,7 @@ FROM rust:1.80.1-slim
 
 RUN apt update
 RUN rustup update
-RUN apt install linux-perf build-essential pkg-config openssl libssl-dev librust-openssl-sys-dev wget curl -y 
+RUN apt install linux-perf build-essential pkg-config openssl libssl-dev librust-openssl-sys-dev wget curl git -y 
 RUN rustup component add rustfmt
 RUN rustup component add clippy
 RUN cargo install cargo-deb
